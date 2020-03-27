@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
     /* pthread_join(tid01, NULL);
     pthread_join(tid02, NULL); */
-
+    
     pthread_exit(0);
     return 0;
 }
