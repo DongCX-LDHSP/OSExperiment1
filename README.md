@@ -15,7 +15,7 @@
 ### 实验结论
 
 1. `解决办法`的步骤`3.`的运行截图如下所示：子进程始终先于parent运行，图片中展示了局部的情况  
-![子进程始终先于parent运行，图片中展示了局部的情况](./ScreenShot/1 - child始终先于parent执行.png)
+![子进程始终先于parent运行，图片中展示了局部的情况](https://github.com/DongCX-LDHSP/OSExperiment1/blob/master/ScreenShot/1%20-%20child%E5%A7%8B%E7%BB%88%E5%85%88%E4%BA%8Eparent%E6%89%A7%E8%A1%8C.png "child始终先于parent执行")
 
 ## 共享内存实验
 
