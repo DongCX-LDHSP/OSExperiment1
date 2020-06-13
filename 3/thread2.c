@@ -6,13 +6,6 @@ int sum;
 void *runner01(void *param);
 void *runner02(void *param);
 
-typedef struct ARGV
-{
-    char* a;
-    pthread_t b;
-}ARGV;
-
-
 int main(int argc, char *argv[])
 {
     sum = 0;
