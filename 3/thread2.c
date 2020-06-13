@@ -32,11 +32,11 @@ int main(int argc, char *argv[])
 
     pthread_attr_init(&attr);
 
-    pthread_create(&tid02, &attr, runner02, argv[1]);
     pthread_create(&tid01, &attr, runner01, argv[1]);
+    pthread_create(&tid02, &attr, runner02, argv[1]);
 
-    pthread_join(tid02, NULL);
     pthread_join(tid01, NULL);
+    pthread_join(tid02, NULL);
     
     pthread_exit(0);
     return 0;
