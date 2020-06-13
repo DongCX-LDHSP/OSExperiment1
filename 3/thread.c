@@ -37,13 +37,7 @@ int main(int argc, char *argv[])
     test->a = argv[1];
     //todo tid01在被赋值之前便拿去使用了，后边即使赋值之后也找不到，故总是segment fault/core dumped
     test->b = tid01;
-
-    // printf("in 02 out\n");
-
     pthread_create(&tid02, &attr, runner02, test);
-
-    /* pthread_join(tid01, NULL);
-    pthread_join(tid02, NULL); */
     
     pthread_exit(0);
     return 0;
@@ -62,7 +56,6 @@ void *runner01(void *param)
 
 void *runner02(void *param)
 {
-    // printf("in 02\n");
     ARGV* test = (ARGV*)param;
     pthread_join(test->b, NULL);
     int i;
@@ -72,5 +65,4 @@ void *runner02(void *param)
         sum -= i;
     }
     printf("[thread 2] sum = %d\n", sum);
-    // pthread_join(tid01, NULL);
 }
